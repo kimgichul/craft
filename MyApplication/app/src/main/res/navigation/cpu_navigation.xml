@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/part_navigation"
+    app:startDestination="@id/navigation_i5">
+
+    <fragment
+        android:id="@+id/navigation_i5"
+        android:name="com.example.myapplication.Main.Craft.cpu.i5Fragment"
+        android:label="fragment_i5"
+        tools:layout="@layout/fragment_i5" />
+
+    <fragment
+        android:id="@+id/navigation_i6"
+        android:name="com.example.myapplication.Main.Craft.cpu.i6Fragment"
+        android:label="fragment_i6"
+        tools:layout="@layout/fragment_i6" />
+
+    <fragment
+        android:id="@+id/navigation_i7"
+        android:name="com.example.myapplication.Main.Craft.cpu.i7Fragment"
+        android:label="fragment_i7"
+        tools:layout="@layout/fragment_i7" />
+
+</navigation>

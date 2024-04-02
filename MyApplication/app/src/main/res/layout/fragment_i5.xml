@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:orientation="vertical">
+
+        <!-- 첫 번째 블럭 -->
+        <LinearLayout
+            android:id="@+id/i5_block1"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="16dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <!-- 제품 이미지 -->
+            <ImageView
+                android:id="@+id/i5_image1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cpu" />
+
+            <!-- 텍스트 부분 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 제품명과 정가 -->
+                <TextView
+                    android:id="@+id/i5_product_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="i5 6500"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/i5_product_price1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="150,000 원"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- 설명 -->
+                <TextView
+                    android:id="@+id/i5_product_description1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="코어 수 : 4 총 스레드 수 4 최대 터보 주파수 : 3.60 GHz 인텔 터보 부스트 기술 2.0 주파수 : 3.60 GHz"
+                    android:textSize="10sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <!-- 두 번째 블럭 -->
+        <LinearLayout
+            android:id="@+id/i5_block2"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/i5_block1"
+            android:layout_marginHorizontal="16dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <!-- 제품 이미지 -->
+            <ImageView
+                android:id="@+id/i5_image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cpu" />
+
+            <!-- 텍스트 부분 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 제품명과 정가 -->
+                <TextView
+                    android:id="@+id/i5_product_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="i5 7500"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/i5_product_price2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="160,000 원"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- 설명 -->
+                <TextView
+                    android:id="@+id/i5_product_description2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="코어 수 : 4 총 스레드 수 : 4 최대 터보 주파수 : 3.80 GHz 인텔 터보 부스트 기술 2.0 주파수 : 3.80 GHz"
+                    android:textSize="10sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <!-- 세 번째 블럭 -->
+        <LinearLayout
+            android:id="@+id/i5_block3"
+            android:layout_width="match_parent"
+            android:layout_marginStart="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/i5_block1"
+            android:layout_marginHorizontal="16dp"
+            android:background="@android:color/darker_gray"
+            android:orientation="horizontal">
+
+            <!-- 제품 이미지 -->
+            <ImageView
+                android:id="@+id/i5_image3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cpu" />
+
+            <!-- 텍스트 부분 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 제품명과 정가 -->
+                <TextView
+                    android:id="@+id/i5_product_name3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="i5 8500"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/i5_product_price3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="170,000 원"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- 설명 -->
+                <TextView
+                    android:id="@+id/i5_product_description3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="코어 수 : 4 총 스레드 수 : 4 최대 터보 주파수 : 3.80 GHz 인텔 터보 부스트 기술 2.0 주파수 : 3.80 GHz"
+                    android:textSize="10sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
