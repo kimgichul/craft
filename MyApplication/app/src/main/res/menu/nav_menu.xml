@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="I5"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:id="@+id/i5"/>
+    <item
+        android:title="I6"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:id="@+id/i6"/>
+    <item
+        android:title="I7"
+        android:icon="@drawable/ic_baseline_menu_book_24"
+        android:id="@+id/i7"/>
+</menu>

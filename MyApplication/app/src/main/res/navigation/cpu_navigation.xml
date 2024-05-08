@@ -2,24 +2,24 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/part_navigation"
+    android:id="@+id/cpu_navigation"
     app:startDestination="@id/navigation_i5">
 
     <fragment
         android:id="@+id/navigation_i5"
-        android:name="com.example.myapplication.Main.Craft.cpu.i5Fragment"
+        android:name="com.example.myapplication.Main.Craft.cpu.I5Fragment"
         android:label="fragment_i5"
         tools:layout="@layout/fragment_i5" />
 
     <fragment
         android:id="@+id/navigation_i6"
-        android:name="com.example.myapplication.Main.Craft.cpu.i6Fragment"
+        android:name="com.example.myapplication.Main.Craft.cpu.I6Fragment"
         android:label="fragment_i6"
         tools:layout="@layout/fragment_i6" />
 
     <fragment
         android:id="@+id/navigation_i7"
-        android:name="com.example.myapplication.Main.Craft.cpu.i7Fragment"
+        android:name="com.example.myapplication.Main.Craft.cpu.I7Fragment"
         android:label="fragment_i7"
         tools:layout="@layout/fragment_i7" />
 

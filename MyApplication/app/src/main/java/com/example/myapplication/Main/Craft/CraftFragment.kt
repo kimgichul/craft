@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.example.myapplication.Item.ItemActivity
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.example.myapplication.R
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import androidx.navigation.fragment.findNavController
-import com.example.myapplication.Guide.GuideActivity
+import com.example.myapplication.Main.Craft.cpu.CpuActivity
 
 class CraftFragment : Fragment() {
 
@@ -20,22 +19,23 @@ class CraftFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // fragment_craft.xml 레이아웃을 inflate하여 View 객체를 생성합니다.
         val view = inflater.inflate(R.layout.fragment_craft, container, false)
 
+        // Button1을 findViewById() 메서드를 사용하여 참조합니다.
         val button1 = view.findViewById<Button>(R.id.button1)
-        val button2 = view.findViewById<Button>(R.id.button2)
-        val button3 = view.findViewById<Button>(R.id.button3)
-        val button4 = view.findViewById<Button>(R.id.button4)
-        val button5 = view.findViewById<Button>(R.id.button5)
-        val button6 = view.findViewById<Button>(R.id.button6)
-        val button7 = view.findViewById<Button>(R.id.button7)
-        val button8 = view.findViewById<Button>(R.id.button8)
 
+        // Button1에 클릭 리스너를 설정합니다.
         button1.setOnClickListener {
-            val intent = Intent(requireContext(), GuideActivity::class.java)
+            // Button1이 클릭되었을 때 실행되는 코드를 작성합니다.
+            // Intent를 사용하여 CPUActivity로 이동하는 코드를 작성합니다.
+            val intent = Intent(activity, CpuActivity::class.java)
             startActivity(intent)
         }
 
+        // 생성된 View 객체를 반환합니다.
         return view
     }
+
+
 }
