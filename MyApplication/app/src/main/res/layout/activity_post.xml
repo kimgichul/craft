@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/post_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="게시글 작성"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24_white" />
+
+        <!-- "자유게시판" 텍스트 -->
+        <TextView
+            android:id="@+id/activity_post_tv_board_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자유게시판"
+            android:textSize="18sp"
+            android:textColor="@color/blue"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="start|center_vertical" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 제목 입력 -->
+    <TextView
+        android:id="@+id/activity_post_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:layout_below="@id/appBarLayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- 제목 미리보기 -->
+    <EditText
+        android:id="@+id/activity_post_et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_post_tv_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="제목을 입력하세요" />
+
+    <!-- 내용 입력 -->
+    <TextView
+        android:id="@+id/activity_post_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내용"
+        android:layout_below="@id/activity_post_et_title"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- 내용 미리보기 -->
+    <EditText
+        android:id="@+id/activity_post_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_post_tv_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="16dp"
+        android:hint="내용을 입력하세요"
+        android:minLines="6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_post_rv_list"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_layout"
+        android:layout_below="@id/activity_post_et_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toEndOf="@+id/activity_post_iv_plusimage" />
+
+    <ImageView
+        android:id="@+id/activity_post_iv_plusimage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/activity_post_et_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sample_icon" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/activity_post_bt_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="등록"
+            android:backgroundTint="@color/blue"/>
+
+        <Button
+            android:id="@+id/activity_post_bt_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="취소"
+            android:backgroundTint="@color/blue"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

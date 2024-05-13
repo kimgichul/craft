@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- 게시글 제목을 표시하기 위한 AppBarLayout과 Toolbar -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/post_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:title="게시글"
+                app:titleTextColor="@color/white"
+                app:navigationIcon="@drawable/ic_baseline_arrow_back_ios_24_white" />
+
+            <!-- 태그와 제목을 표시하기 위한 LinearLayout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp">
+
+                <!-- 태그를 표시하는 TextView -->
+                <TextView
+                    android:id="@+id/fragment_post_item_tv_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[태그]"
+                    android:textSize="14sp" />
+
+                <!-- 제목을 표시하는 TextView -->
+                <TextView
+                    android:id="@+id/fragment_post_item_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="제목"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <!-- 게시 시간을 표시하는 TextView -->
+
+            <!-- 게시 시간 아래에 선을 그리기 위한 View -->
+            <!-- 작성자와 게시 시간을 표시하는 LinearLayout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/fragment_post_item_tv_tag"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <!-- 작성자를 표시하는 TextView -->
+                <TextView
+                    android:id="@+id/fragment_post_item_tv_writer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작성자"
+                    android:textSize="16sp" />
+
+                <!-- 게시 시간을 표시하는 TextView -->
+                <TextView
+                    android:id="@+id/fragment_post_item_tv_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:text="게시 시간"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/fragment_post_item_tv_time"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- 가로 리사이클러뷰 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_post_item_rc2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBarLayout"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            />
+
+
+        <!-- 게시 내용을 표시하는 TextView -->
+        <TextView
+            android:id="@+id/fragment_post_item_tv_content"
+            android:layout_width="376dp"
+            android:layout_height="366dp"
+            android:layout_below="@+id/fragment_post_item_rc2"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="게시 내용"
+            android:textSize="16sp" />
+
+
+        <!-- 게시 내용 아래에 선을 그리기 위한 View -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fragment_post_item_tv_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- "댓글" 텍스트 뷰 -->
+        <TextView
+            android:id="@+id/textViewComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글"
+            android:textSize="16sp"
+            android:layout_below="@id/fragment_post_item_tv_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            />
+
+        <!-- 에딧텍스트 뷰 -->
+        <EditText
+            android:id="@+id/fragment_post_item_et_Comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="댓글을 입력하세요"
+            android:inputType="text"
+            android:layout_toEndOf="@id/textViewComment"
+            android:layout_below="@id/fragment_post_item_tv_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
+
+
+        <!-- 첫 번째 이미지 버튼 -->
+        <ImageView
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_bookmark_border_24_white"
+            android:layout_below="@id/fragment_post_item_tv_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- 두 번째 이미지 버튼 -->
+
+        <ImageView
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_favorite_border_24_white"
+            android:layout_toStartOf="@id/imageButton1"
+            android:layout_below="@id/fragment_post_item_tv_title"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- 세 번째 이미지 버튼 -->
+        <ImageView
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24_white"
+            android:layout_toStartOf="@id/imageButton2"
+            android:layout_below="@id/fragment_post_item_tv_title"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <!-- 댓글 작성 이미지 버튼 -->
+
+        <ImageView
+            android:id="@+id/fragment_post_item_iv_SubmitComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fragment_post_item_et_Comment"
+            android:layout_alignEnd="@+id/fragment_post_item_et_Comment"
+            android:layout_alignBottom="@+id/fragment_post_item_et_Comment"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_baseline_chat_bubble_24_blue" />
+
+        <!-- 게시 내용 아래에 선을 그리기 위한 View -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/fragment_post_item_et_Comment"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <!-- 댓글을 표시하기 위한 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_post_item_rc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fragment_post_item_et_Comment"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
