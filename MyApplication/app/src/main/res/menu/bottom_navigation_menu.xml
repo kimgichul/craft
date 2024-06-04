@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_craft"
+        android:icon="@drawable/ic_menu_craft"
+        android:title="조립하기" />
+    <item
+        android:id="@+id/navigation_chart"
+        android:icon="@drawable/ic_menu_chart"
+        android:title="가격비교" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_menu_home"
+        android:title="홈" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_menu_chat"
+        android:title="채팅" />
+
+    <item
+        android:id="@+id/navigation_cart"
+        android:icon="@drawable/ic_menu_shopping_cart"
+        android:title="장바구니" />
+</menu>
